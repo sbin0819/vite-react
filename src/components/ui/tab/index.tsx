@@ -1,7 +1,14 @@
 import React from 'react';
 
-const Tab = () => {
-  return <div className="text-orange-400">tab</div>;
+interface Props {
+  children: React.ReactElement | React.ReactElement[];
+}
+const Tab = ({ children }: Props) => {
+  return <div>{children}</div>;
+};
+
+Tab.Item = function Item() {
+  return <li>item</li>;
 };
 
 export default Tab;

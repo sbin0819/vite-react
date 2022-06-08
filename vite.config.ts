@@ -22,6 +22,10 @@ export default defineConfig({
         find: '@ui',
         replacement: path.resolve(__dirname, 'src/components/ui'),
       },
+      {
+        find: '@lib',
+        replacement: path.resolve(__dirname, 'src/components/lib'),
+      },
     ],
   },
 });
