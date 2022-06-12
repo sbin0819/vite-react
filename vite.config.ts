@@ -24,7 +24,7 @@ export default defineConfig({
       },
       {
         find: '@lib',
-        replacement: path.resolve(__dirname, 'src/components/lib'),
+        replacement: path.resolve(__dirname, 'src/lib'),
       },
     ],
   },

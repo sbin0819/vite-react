@@ -1,20 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { Table, Tab } from '@components/ui';
-import { tableData } from '@lib/mockData';
-const { Item: TabItem } = Tab;
+import { TablePlain, Table, TableWithFilter } from '@components/home';
 
 const Home = () => {
   return (
     <div>
-      <Tab>
-        <TabItem />
-        <TabItem />
-        <TabItem />
-      </Tab>
-      <Table>
-        <Table.Header headings={tableData.headings} />
-        <Table.Body body={tableData.body} />
-      </Table>
+      <div className="m-[100px]">
+        <TablePlain />
+      </div>
     </div>
   );
 };
