@@ -7,11 +7,19 @@ export const funcMockTableBody = (n) => {
   for (let i = 0; i < n; i++) {
     const {
       internet: { email, userName },
-      address: { country },
+      address: { countryCode },
       date: { month },
     } = faker;
     const randomAge = Math.floor(Math.random() * (40 - 20) + 20);
-    result.push([email(), userName(), country(), randomAge, month()]);
+    const randomCreatedMonth = Math.floor(Math.random() * (12 - 1) + 1);
+
+    result.push([
+      email(),
+      userName(),
+      countryCode(),
+      randomAge,
+      randomCreatedMonth,
+    ]);
   }
   return result;
 };

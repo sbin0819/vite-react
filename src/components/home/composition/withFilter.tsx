@@ -5,7 +5,6 @@ import { mockHedaer, funcMockTableBody } from '@lib/fakerData';
 
 const TableFilter = () => {
   const filters = [
-    { title: 'country', idx: 2 },
     { title: 'age', idx: 3 },
     { title: 'createdAt', idx: 4 },
   ];

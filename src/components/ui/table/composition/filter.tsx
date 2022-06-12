@@ -9,24 +9,26 @@ interface ChildrenProps {
 }
 interface Props {
   filters: FilterProps[];
-  bodyData: string[][];
+  bodyData: any[][];
   children: (sortedBodyData: ChildrenProps) => React.ReactElement;
 }
 
 const Filter = ({ children, bodyData, filters }: Props) => {
   const originData = [...bodyData];
-  const [sortedBodyData, setSortedBodyData] = React.useState(() => bodyData);
-  const onReset = () => {
-    setSortedBodyData(originData);
-  };
+  const [sortedBodyData, setSortedBodyData] = React.useState(bodyData);
   const onSort = (idx: number) => {
-    setSortedBodyData(originData.sort((a: any, b: any) => a[idx] - b[idx]));
+    setSortedBodyData((prev) => [
+      ...prev.sort((a: any[], b: any[]) => a[idx] - b[idx]),
+    ]);
   };
 
   return (
     <div>
       <div className="flex gap-4 mb-2">
-        <button className="text-cyan-600" onClick={onReset}>
+        <button
+          className="text-cyan-600"
+          onClick={() => setSortedBodyData(originData)}
+        >
           reset
         </button>
         {filters.map((filter: FilterProps) => (
