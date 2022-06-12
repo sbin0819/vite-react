@@ -27,6 +27,7 @@ module.exports = {
   ],
   plugins: ['simple-import-sort', 'prettier'],
   rules: {
+    'no-unused-vars': 'off',
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'off',
