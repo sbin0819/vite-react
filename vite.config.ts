@@ -19,6 +19,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/hooks/'),
       },
       {
+        find: '@atoms',
+        replacement: path.resolve(__dirname, 'src/atoms/'),
+      },
+      {
         find: '@ui',
         replacement: path.resolve(__dirname, 'src/components/ui'),
       },

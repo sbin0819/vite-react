@@ -22,7 +22,8 @@
       "@hooks/*": ["./src/hooks/*"],
       "@ui": ["./src/components/ui/"],
       "@ui/*": ["./src/components/ui/*"],
-      "@lib/*": ["./src/lib/*"]
+      "@lib/*": ["./src/lib/*"],
+      "@atoms/*": ["./src/atoms/*"]
     }
   },
   "include": ["src"],
